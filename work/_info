@@ -36,10 +36,10 @@ Artl
 R1
 R2
 R3
-Z14 DEx4 work 9 amplifier 0 22 j5Z^0kg6CWOW_Y=k`omT63
+DEx4 work 9 amplifier 0 22 j5Z^0kg6CWOW_Y=k`omT63
 !i122 21
 l21
-Z15 L13 15
+L13 15
 VOkekbIAiFc4lz9h;eR0IK0
 !s100 57A?`MIb52S;<YW7PKc0c2
 R7
@@ -49,6 +49,74 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Edelay
+Z14 w1703329209
+Z15 DPx4 work 9 delay_pkg 0 22 Z_l^C:L`4eR:m[Ab@9`RC3
+R1
+R2
+R3
+!i122 57
+R4
+Z16 8D:/Wendy/PSD/Sample_Delay.vhd
+Z17 FD:/Wendy/PSD/Sample_Delay.vhd
+l0
+L7 1
+V0Q<9i<?kz]TJOWdAV[]=K3
+!s100 EQOcZlG@KJZ>=D:0goNBg1
+R7
+32
+Z18 !s110 1703329215
+!i10b 1
+Z19 !s108 1703329215.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Sample_Delay.vhd|
+Z21 !s107 D:/Wendy/PSD/Sample_Delay.vhd|
+!i113 1
+R12
+R13
+Artl
+R15
+R1
+R2
+R3
+Z22 DEx4 work 5 delay 0 22 0Q<9i<?kz]TJOWdAV[]=K3
+!i122 57
+l17
+Z23 L16 11
+Z24 V98XAh5d6?DZT;E0Q4BeFC0
+Z25 !s100 U5Pj^DFZJCNO?DAZ2d5oV3
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Pdelay_pkg
+R1
+R2
+R3
+!i122 28
+w1703327386
+R4
+R16
+R17
+l0
+L5 1
+VZ_l^C:L`4eR:m[Ab@9`RC3
+!s100 74MF?c0c`_nMVa0iz@`6:3
+R7
+32
+!s110 1703327390
+!i10b 1
+!s108 1703327390.000000
+R20
+R21
 !i113 1
 R12
 R13

@@ -384,3 +384,88 @@ force -freeze sim:/amplifier/coefficient 00100000 0
 force -freeze sim:/amplifier/coefficient 00100000 0
 force -freeze sim:/amplifier/amp_in 01110000 0
 run
+# Compile of Adder.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+run
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd was successful.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd failed with 2 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd was successful.
+vsim -gui work.delay
+# End time: 05:58:21 on Dec 23,2023, Elapsed time: 0:49:17
+# Errors: 0, Warnings: 44
+# vsim -gui work.delay 
+# Start time: 05:58:21 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.delay(rtl)
+add wave -position insertpoint sim:/delay/*
+force -freeze sim:/delay/delay_in(7) 00000001 0
+force -freeze sim:/delay/delay_in(7) 00000001 0
+force -freeze sim:/delay/delay_in(0) 00000001 0
+force -freeze sim:/delay/order 0 0
+force -freeze sim:/delay/data_current 0 0
+run
+force -freeze sim:/delay/data_current 7 0
+force -freeze sim:/delay/delay_in(7) 00000010 0
+run
+# Compile of Sample_Delay.vhd was successful.
+vsim -gui work.delay
+# End time: 06:00:21 on Dec 23,2023, Elapsed time: 0:02:00
+# Errors: 0, Warnings: 2
+# vsim -gui work.delay 
+# Start time: 06:00:21 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.delay(rtl)
+add wave -position insertpoint sim:/delay/*
+force -freeze sim:/delay/data_current 7 0
+force -freeze sim:/delay/order 1 0
+force -freeze sim:/delay/delay_in(7) 00010000 0
+force -freeze sim:/delay/delay_in(7) 00010000 0
+force -freeze sim:/delay/delay_in(0) 00010011 0
+force -freeze sim:/delay/delay_in(6) 00010001 0
+run
