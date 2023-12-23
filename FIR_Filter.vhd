@@ -1,29 +1,32 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+library work;
+use work.delay_pkg.all;
 
 entity FIR_Filter is
     port (
         clk : in std_logic;
-        control_word : in std_logic_vector(7 downto 0);
+        control_word : in std_logic_vector(7 downto 0)
     );
 end FIR_Filter;
 
 architecture rtl of FIR_Filter is
+    
 ---port initialization---------------------------
     component Adder is
         port (
-            input_num : in  integer;
-            adder_in : in  std_logic_vector((input_num - 1) downto 0)(7 downto 0);
+            adder_in : array_8:= (others => (others => '0'));
             adder_out : out std_logic_vector(7 downto 0)
         );
     end component Adder;
 
     component Amplifier is
         port(
-            constant : in std_logic_vector(7 downto 0);
-            amp_in : in std_logic_vector(7 downto 0);
-            amp_out : out std_logic_vector(7 downto 0)
+            data_current : in integer;
+            order : in integer;
+            delay_in : in array_8;  
+            delay_out : out std_logic_vector(7 downto 0)
         );
     end component Amplifier;
 
@@ -31,8 +34,8 @@ architecture rtl of FIR_Filter is
         port(
         data_current : in integer;
         order : in integer;
-        delay_in : in std_logic_vector (7 down to 0);
-        delay_out : out std_logic
+        delay_in : in array_8;  
+        delay_out : out std_logic_vector(7 downto 0)
         );
     end component Sample_Delay;
 
@@ -52,35 +55,35 @@ architecture rtl of FIR_Filter is
     begin
         process (clk) is
             begin
-            case state
+            case state is
             when FETCH_ORDER =>
                 if rising_edge(clk) then
                     order <= to_integer(unsigned(control_word(7 downto 5)));
                     state <= INSTANTIATE;
                 end if;
+            end case;
+            end process;
 
-            when INSTANTIATE =>
-                for (i = 0; i < order; i++) loop
-                    coefficient_array(i) <= control_word(7 downto 0);
-                end loop;
-                
-                gen_components : --generate amplifiers based on order
+            process (clk) is
+                begin
                     for i in 0 to order generate
+    
                         if rising_edge(clk) then
+                            coefficient_array(i) <= control_word(7 downto 0);
                             amplifier : entity work.Amplifier
                                 port map (
                                     constant => data_array(i),
-                                    amp_in => data_word(15 downto 8),
-                                    amp_out => data_word(15 downto 8)
+                                    amp_in => control_word(7 downto 0)
                                 );
                             sample_delay : entity work.Sample_Delay
                                 port map (
                                     data_current => 0,
                                     order => i,
-                                    delay_in => delay_in
+                                    delay_in => s_delay_out(i),
+                                    delay_out => s_delay_in(i)
                                 );
                         end if;
-                    end generate gen_amplifiers;
+                    end generate;
 
                 Adder port map (
                     input_num => order,
@@ -88,7 +91,7 @@ architecture rtl of FIR_Filter is
                     adder_out => data_word(7 downto 0)
                 );
                 state <= COUNT;
-    end case state;
+        end case state;
             end process;
 
         process (clk) is
