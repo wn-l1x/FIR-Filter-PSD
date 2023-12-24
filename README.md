@@ -1,2 +1,2 @@
-# FeedForwardFilter
-A Feed Forward Filter made using VHDL
+# FirFilter
+A Feed Forward / FIR Filter made using VHDL
