@@ -4,16 +4,16 @@ use ieee.numeric_std.all;
 library work;
 use work.delay_pkg.all;
 
-entity delay is
+entity Sample_Delay is
     port (
         data_current : in integer;
         order : in integer;
         delay_in : in array_8;  
         delay_out : out std_logic_vector(7 downto 0)
     );
-end delay;
+end entity;
 
-architecture rtl of delay is
+architecture rtl of Sample_Delay is
     begin
         process(data_current, order, delay_in) 
         begin

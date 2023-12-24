@@ -17,7 +17,7 @@ architecture rtl of FIR_Filter is
 ---port initialization---------------------------
     component Adder is
         port (
-            adder_in : array_8:= (others => (others => '0'));
+            adder_in : array_8;
             adder_out : out std_logic_vector(7 downto 0)
         );
     end component Adder;
@@ -98,15 +98,37 @@ architecture rtl of FIR_Filter is
                                 end if;
                                 if data_c = order then 
                                     data_c <= 0;
-                                    state <= count;
+                                    state <= COUNT;
                                 end if;
 
                     when COUNT =>
-                        data_c <= 0;
-                        s_amp_in(data_c) <= s_delay_out(data_c);
+                        if rising_edge(clk) then
+                        data_c <= data_c + 1; 
+                        s_amp_in(0) <= s_delay_out(0);
+                        s_amp_in(1) <= s_delay_out(1);
+                        s_amp_in(2) <= s_delay_out(2);
+                        s_amp_in(3) <= s_delay_out(3);
+                        s_amp_in(4) <= s_delay_out(4);
+                        s_amp_in(5) <= s_delay_out(5);
+                        s_amp_in(6) <= s_delay_out(6);
+                        s_amp_in(7) <= s_delay_out(7);
+                        s_adder_in(0) <= s_amp_out(0);
+                        s_adder_in(1) <= s_amp_out(1);
+                        s_adder_in(2) <= s_amp_out(2);
+                        s_adder_in(3) <= s_amp_out(3);
+                        s_adder_in(4) <= s_amp_out(4);
+                        s_adder_in(5) <= s_amp_out(5);
+                        s_adder_in(6) <= s_amp_out(6);
+                        s_adder_in(7) <= s_amp_out(7);              
+                        if data_c = order then 
+                            data_c <= 0;
+                            state <= DONE;
+                        end if;
+                        end if;
+
                     when DONE =>
                         state <= FETCH_ORDER;   
-                end case;
+            end case;
             end if;
         end process;
                           

@@ -24,9 +24,9 @@ architecture rtl of Adder is
     signal a_out : real := 0.0;
 
 begin
-    a_out <= (real_convert(adder_in(0))/128.0) + (real_convert(adder_in(1))/128.0)
-    + (real_convert(adder_in(2))/128.0) + (real_convert(adder_in(3))/128.0)
-    + (real_convert(adder_in(4))/128.0) + (real_convert(adder_in(5))/128.0)
-    + real_convert(adder_in(6))/128.0 + real_convert(adder_in(7))/128.0;
+    a_out <= (real_convert(adder_in(0)) + real_convert(adder_in(1))
+    + real_convert(adder_in(2)) + real_convert(adder_in(3))
+    + real_convert(adder_in(4)) + real_convert(adder_in(5))
+    + real_convert(adder_in(6)) + real_convert(adder_in(7)));
     adder_out <= std_logic_vector(to_signed(integer(a_out), 8));
 end rtl;
