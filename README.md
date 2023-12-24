@@ -25,7 +25,24 @@ The architecture includes a state machine that controls the flow of data through
 
 ## File Output
 The architecture writes delay input and adder output values to separate text files (delay_in_values.txt and adder_out_values.txt, respectively) during the ADD state.
+## Prerequisites
+- [Your VHDL Simulator] - Install a VHDL simulator such as ModelSim or GHDL.
+- [Python 3] - Ensure Python 3 is installed on your system.
+- [pip] - The package installer for Python. If not already installed, follow the instructions below:
 
+    ```bash
+    # Install pip (if not already installed)
+    sudo apt-get install python3-pip   # For Linux
+    brew install python3-pip           # For macOS
+    ```
+
+- [matplotlib] - A Python 2D plotting library. Install it using:
+
+    ```bash
+    # Install matplotlib using pip
+    pip install matplotlib
+    ```
+    
 ## How to Use
 #### Instantiate the FIR_Filter module in your VHDL design.
 #### Connect the clk and control_word ports appropriately.
