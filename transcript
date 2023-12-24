@@ -2478,3 +2478,115 @@ run
 # HDL call sequence:
 # Stopped at D:/Wendy/PSD/Sample_Delay.vhd 23 Process line__18
 # 
+# Compile of FIR_Filter.vhd was successful.
+# Compile of FIR_Filter_tb.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.fir_filter_tb
+# End time: 03:14:05 on Dec 24,2023, Elapsed time: 0:07:22
+# Errors: 1, Warnings: 27
+# vsim -gui work.fir_filter_tb 
+# Start time: 03:14:05 on Dec 24,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fir_filter_tb(tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.fir_filter(rtl)
+# Loading work.sample_delay(rtl)
+# Loading work.amplifier(rtl)
+# Loading work.adder(rtl)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/fir_filter_tb/*
+force -freeze sim:/fir_filter_tb/clk_tb 1 0, 0 {50 ps} -r 100
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(0)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter_tb/uut/amp_delay(0)/gen_amp
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 1  Instance: /fir_filter_tb/uut/amp_delay(0)/gen_amp
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 600 ps  Iteration: 0  Instance: /fir_filter_tb/uut
+run
+run
+run
+run
+run
+run
+run
