@@ -15,7 +15,7 @@ Z1 DPx4 work 9 delay_pkg 0 22 Z_l^C:L`4eR:m[Ab@9`RC3
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 112
+!i122 148
 Z5 dD:/Wendy/PSD
 Z6 8D:/Wendy/PSD/Adder.vhd
 Z7 FD:/Wendy/PSD/Adder.vhd
@@ -25,9 +25,9 @@ V[:elI81gNH7Td0Ve0TK892
 !s100 DFH7[HDM949HIL_@SMIYB1
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1703343059
+Z9 !s110 1703365074
 !i10b 1
-Z10 !s108 1703343059.000000
+Z10 !s108 1703365074.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Adder.vhd|
 Z12 !s107 D:/Wendy/PSD/Adder.vhd|
 !i113 1
@@ -39,7 +39,7 @@ R2
 R3
 R4
 DEx4 work 5 adder 0 22 [:elI81gNH7Td0Ve0TK892
-!i122 112
+!i122 148
 l26
 L15 18
 VBRK`2=GR^2A5V:ceD:GP=0
@@ -59,21 +59,21 @@ Z15 w1703340565
 R2
 R3
 R4
-!i122 93
+!i122 149
 R5
-Z16 8D:\Wendy\PSD\Amplifier.vhd
-Z17 FD:\Wendy\PSD\Amplifier.vhd
+Z16 8D:/Wendy/PSD/Amplifier.vhd
+Z17 FD:/Wendy/PSD/Amplifier.vhd
 l0
 L4 1
 V06Rc=Az7T9]LkzW0G54iB0
 !s100 O]A2UAfhL?PmSZi?d9Mz50
 R8
 32
-Z18 !s110 1703340579
+R9
 !i10b 1
-Z19 !s108 1703340579.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\Wendy\PSD\Amplifier.vhd|
-Z21 !s107 D:\Wendy\PSD\Amplifier.vhd|
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Amplifier.vhd|
+Z19 !s107 D:/Wendy/PSD/Amplifier.vhd|
 !i113 1
 R13
 R14
@@ -82,42 +82,42 @@ R2
 R3
 R4
 DEx4 work 9 amplifier 0 22 06Rc=Az7T9]LkzW0G54iB0
-!i122 93
+!i122 149
 l25
 L12 19
 VDhVmW0f7E25jgdejnC;Z52
 !s100 CK@[6PJJOCCQD6FEUEI611
 R8
 32
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R13
 R14
 Edelay
-Z22 w1703342269
+Z20 w1703342269
 R1
 R2
 R3
 R4
-!i122 113
+!i122 151
 R5
-Z23 8D:/Wendy/PSD/Sample_Delay.vhd
-Z24 FD:/Wendy/PSD/Sample_Delay.vhd
+Z21 8D:/Wendy/PSD/Sample_Delay.vhd
+Z22 FD:/Wendy/PSD/Sample_Delay.vhd
 l0
 L7 1
 V0Q<9i<?kz]TJOWdAV[]=K3
 !s100 EQOcZlG@KJZ>=D:0goNBg1
 R8
 32
-Z25 !s110 1703343061
+Z23 !s110 1703365075
 !i10b 1
-Z26 !s108 1703343061.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Sample_Delay.vhd|
-Z28 !s107 D:/Wendy/PSD/Sample_Delay.vhd|
+Z24 !s108 1703365075.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Sample_Delay.vhd|
+Z26 !s107 D:/Wendy/PSD/Sample_Delay.vhd|
 !i113 1
 R13
 R14
@@ -127,18 +127,18 @@ R2
 R3
 R4
 DEx4 work 5 delay 0 22 0Q<9i<?kz]TJOWdAV[]=K3
-!i122 113
+!i122 151
 l17
 L16 11
 V98XAh5d6?DZT;E0Q4BeFC0
 !s100 U5Pj^DFZJCNO?DAZ2d5oV3
 R8
 32
-R25
+R23
 !i10b 1
+R24
+R25
 R26
-R27
-R28
 !i113 1
 R13
 R14
@@ -149,8 +149,8 @@ R4
 !i122 28
 w1703327386
 R5
-R23
-R24
+R21
+R22
 l0
 L5 1
 VZ_l^C:L`4eR:m[Ab@9`RC3
@@ -160,32 +160,53 @@ R8
 !s110 1703327390
 !i10b 1
 !s108 1703327390.000000
-R27
-R28
+R25
+R26
 !i113 1
 R13
 R14
 Efir_filter
-w1703343936
+Z27 w1703385501
 R1
 R2
 R3
 R4
-!i122 125
+!i122 201
 R5
-8D:/Wendy/PSD/FIR_Filter.vhd
-FD:/Wendy/PSD/FIR_Filter.vhd
+Z28 8D:\Wendy\PSD\FIR_Filter.vhd
+Z29 FD:\Wendy\PSD\FIR_Filter.vhd
 l0
-L7 1
-VGC]_;nl6VEkfXR?:Idn?i2
-!s100 nGeo50aOE10gWFk@6mdgc2
+L8 1
+V2GOke=BHS7^A48lB5?dhb3
+!s100 JM>jFmhJ_IMC2B3AGiz5I2
 R8
 32
-!s110 1703343944
+Z30 !s110 1703385514
 !i10b 1
-!s108 1703343943.000000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/FIR_Filter.vhd|
-!s107 D:/Wendy/PSD/FIR_Filter.vhd|
+Z31 !s108 1703385514.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\Wendy\PSD\FIR_Filter.vhd|
+Z33 !s107 D:\Wendy\PSD\FIR_Filter.vhd|
+!i113 1
+R13
+R14
+Artl
+R1
+R2
+R3
+R4
+Z34 DEx4 work 10 fir_filter 0 22 2GOke=BHS7^A48lB5?dhb3
+!i122 201
+l55
+L15 107
+V0c]Kl4n?1?@dBKADZK1kJ3
+!s100 n==Rzd:9IUX5Tm3I8A1FP2
+R8
+32
+R30
+!i10b 1
+R31
+R32
+R33
 !i113 1
 R13
 R14

@@ -1,3 +1,4 @@
+-- FILEPATH: /d:/Wendy/PSD/FIR_Filter.vhd
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -23,10 +24,9 @@ architecture rtl of FIR_Filter is
 
     component Amplifier is
         port(
-            data_current : in integer;
-            order : in integer;
-            delay_in : in array_8;  
-            delay_out : out std_logic_vector(7 downto 0)
+            coefficient : in std_logic_vector(7 downto 0);
+            amp_in : in std_logic_vector(7 downto 0);
+            amp_out : out std_logic_vector(7 downto 0)
         );
     end component Amplifier;
 
@@ -40,78 +40,74 @@ architecture rtl of FIR_Filter is
     end component Sample_Delay;
 
 ---signal initialization-------------------------
-    signal order : integer;
-    type state_list is (FETCH_ORDER, INSTANTIATE, FETCH_NUM, COUNT, DONE);
+    type state_list is (FETCH_ORDER, FETCH_INPUT, FETCH_AMP, COUNT, DONE);
     signal state : state_list := FETCH_ORDER;
-    type data_array is array (0 to 7) of std_logic_vector(7 downto 0);
-    signal coefficient_array : data_array;
-    signal s_amp_in : data_array;
-    signal s_amp_out : data_array;
-    signal s_delay_in : data_array;
-    signal s_delay_out : data_array;
-    signal s_adder_in : data_array;
-    signal s_adder_out : data_array;
+    signal order : integer;
+    signal data_c : integer := 0;
+    signal s_delay_in : array_8;
+    signal s_delay_out : array_8;
+    signal s_coefficient_list : array_8;
+    signal s_amp_in : array_8;
+    signal s_amp_out : array_8;
+    signal s_adder_in : array_8;
+    signal s_adder_out : std_logic_vector(7 downto 0);
     
     begin
-        process (clk) is
-            begin
-            case state is
-            when FETCH_ORDER =>
-                if rising_edge(clk) then
-                    order <= to_integer(unsigned(control_word(7 downto 5)));
-                    state <= INSTANTIATE;
-                end if;
-            end case;
-            end process;
-
-            process (clk) is
-                begin
-                    for i in 0 to order generate
-    
-                        if rising_edge(clk) then
-                            coefficient_array(i) <= control_word(7 downto 0);
-                            amplifier : entity work.Amplifier
-                                port map (
-                                    constant => data_array(i),
-                                    amp_in => control_word(7 downto 0)
-                                );
-                            sample_delay : entity work.Sample_Delay
-                                port map (
-                                    data_current => 0,
-                                    order => i,
-                                    delay_in => s_delay_out(i),
-                                    delay_out => s_delay_in(i)
-                                );
-                        end if;
-                    end generate;
-
-                Adder port map (
-                    input_num => order,
-                    adder_in => data_word(15 downto 8),
-                    adder_out => data_word(7 downto 0)
+        --component generation
+        amp_delay: for i in 0 to 7 generate
+                gen_delay: Sample_Delay port map(
+                    data_current => data_c,
+                    order => i,
+                    delay_in => s_delay_in,
+                    delay_out => s_delay_out(i)
                 );
-                state <= COUNT;
-        end case state;
-            end process;
+                gen_amp: Amplifier port map(
+                    coefficient => s_coefficient_list(i),
+                    amp_in => s_amp_in(i),
+                    amp_out => s_amp_out(i)
+                );
+            end generate;
 
-        process (clk) is
-            begin
-            case state
-            when COUNT =>
-                
-            end case state;
-            end process;
+            gen_adder: Adder port map(
+                adder_in => s_adder_in,
+                adder_out => s_adder_out
+            );
 
-end rtl;
-    
+        process(clk)
+        begin
+            if rising_edge(clk) then
+                case state is
+                    when FETCH_ORDER=>
+                        order <= to_integer(unsigned(control_word(7 downto 5)));
+                        state <= FETCH_INPUT;
+                    
+                        when FETCH_INPUT=>
+                        if rising_edge(clk) then
+                            s_delay_in(data_c) <= control_word(7 downto 0); 
+                            data_c <= data_c + 1; 
+                        end if;
+                        if data_c = order then 
+                            data_c <= 0;
+                            state <= FETCH_AMP;
+                        end if;
 
-    
+                    when FETCH_AMP =>
+                            if rising_edge(clk) then
+                                s_coefficient_list(data_c) <= control_word(7 downto 0); 
+                                data_c <= data_c + 1; 
+                                end if;
+                                if data_c = order then 
+                                    data_c <= 0;
+                                    state <= count;
+                                end if;
 
-
-
-    
-
-    
-
-    
-    
+                    when COUNT =>
+                        data_c <= 0;
+                        s_amp_in(data_c) <= s_delay_out(data_c);
+                    when DONE =>
+                        state <= FETCH_ORDER;   
+                end case;
+            end if;
+        end process;
+                          
+    end architecture rtl;
