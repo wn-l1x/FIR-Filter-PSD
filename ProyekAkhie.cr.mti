@@ -27,14 +27,4 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Amplifier
 -- Compiling architecture rtl of Amplifier
 
-} {} {}} D:/Wendy/PSD/FIR_Filter.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Wendy/PSD/FIR_Filter.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package delay_pkg
--- Compiling entity FIR_Filter
--- Compiling architecture rtl of FIR_Filter
-
 } {} {}}

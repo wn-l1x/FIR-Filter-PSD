@@ -2,15 +2,17 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use std.textio.all;
-use std.standard.all;
 library work;
 use work.delay_pkg.all;
+library std;
+use std.textio.all;
+use std.standard.all;
 
 entity FIR_Filter is
     port (
         clk : in std_logic;
-        control_word : in std_logic_vector(7 downto 0)
+        control_word : in std_logic_vector(7 downto 0);
+        filtered : out real
     );
 end FIR_Filter;
 
@@ -22,14 +24,10 @@ architecture rtl of FIR_Filter is
         temp := real(to_integer(signed(x)));
         return temp;
     end function real_convert;
-    
-    file delay_in_file : text open write_mode is "delay_in_values.txt";
-    file adder_out_file : text open write_mode is "adder_out_values.txt";
-
-    --port initialization
+---port initialization---------------------------
     component Adder is
         port (
-            adder_in : in array_8;
+            adder_in : array_8;
             adder_out : out std_logic_vector(7 downto 0)
         );
     end component Adder;
@@ -51,8 +49,8 @@ architecture rtl of FIR_Filter is
         );
     end component Sample_Delay;
 
-    --signal initialization
-    type state_list is (FETCH_ORDER, FETCH_INPUT, FETCH_AMP, COUNT, ADD, DONE);
+---signal initialization-------------------------
+    type state_list is (FETCH_ORDER, FETCH_INPUT, FETCH_AMP, COUNT, DONE);
     signal state : state_list := FETCH_ORDER;
     signal order : integer;
     signal data_c : integer := 0;
@@ -63,6 +61,12 @@ architecture rtl of FIR_Filter is
     signal s_amp_out : array_8;
     signal s_adder_in : array_8;
     signal s_adder_out : std_logic_vector(7 downto 0);
+    
+    -- File variables
+    file s_adder_out_file : text;
+    file s_delay_in_file : text;
+    variable s_adder_out_line : line;
+    variable s_delay_in_line : line;
     
 begin
     --component generation
@@ -92,7 +96,7 @@ begin
                 when FETCH_ORDER=>
                     order <= to_integer(unsigned(control_word(7 downto 5)));
                     state <= FETCH_INPUT;
-
+                
                 when FETCH_INPUT=>
                     if rising_edge(clk) then
                         s_delay_in(data_c) <= control_word(7 downto 0); 
@@ -113,37 +117,42 @@ begin
                         state <= COUNT;
                     end if;
 
-                    when COUNT =>
+                when COUNT =>
                     if rising_edge(clk) then
+                
+                        -- Assign values to s_amp_in based on s_delay_out
                         for i in 0 to 7 loop
                             s_amp_in(i) <= s_delay_out(i);
                         end loop;
-                       
-                    end if;
-                        state <= ADD;
-                    
-                    when ADD =>   
+                
+                        -- Assign values to s_adder_in based on s_amp_out
                         for i in 0 to 7 loop
                             s_adder_in(i) <= s_amp_out(i);
-                            write(delay_in_file, real'image(real(to_integer(signed(s_delay_in(i))))));
-                            write(delay_in_file, " ");
-                            write(adder_out_file, real'image(real(to_integer(signed(s_adder_out)))));
-                            write(adder_out_file, " ");
                         end loop;
 
-                    if data_c = order+1 then 
-                        data_c <= 0;
-                        state <= DONE;
-                    else
+                        -- Write s_adder_out to file
+                        write(s_adder_out_line, to_string(s_adder_out));
+                        writeline(s_adder_out_file, s_adder_out_line);
+                        -- Fix: Use the to_string function from the numeric_std package
+                        write(s_adder_out_line, to_string(unsigned(s_adder_out)));
+                        writeline(s_adder_out_file, s_adder_out_line);
+                        
+                        -- Write s_delay_in to file
+                        write(s_delay_in_line, to_string(s_delay_in));
+                        writeline(s_delay_in_file, s_delay_in_line);
+
                         data_c <= data_c + 1;
-                        state <= COUNT;
+                        filtered <= real_convert(s_adder_out) / 128.0;   
+
+                        if data_c = order then 
+                            data_c <= 0;
+                            state <= DONE;
+                        end if;
                     end if;
-
                 when DONE =>
-                    -- Do any cleanup or finalization here
-
+                     
             end case;
         end if;
     end process;
-
+                          
 end architecture rtl;

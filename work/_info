@@ -10,12 +10,12 @@ z2
 cModel Technology
 dC:/Users/Digilab-AMD/Documents/PSD
 Eadder
-Z0 w1703388644
+Z0 w1703403525
 Z1 DPx4 work 9 delay_pkg 0 22 Z_l^C:L`4eR:m[Ab@9`RC3
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 257
+!i122 407
 Z5 dD:/Wendy/PSD
 Z6 8D:/Wendy/PSD/Adder.vhd
 Z7 FD:/Wendy/PSD/Adder.vhd
@@ -25,9 +25,9 @@ V[:elI81gNH7Td0Ve0TK892
 !s100 DFH7[HDM949HIL_@SMIYB1
 Z8 OV;C;2020.1;71
 32
-Z9 !s110 1703389135
+Z9 !s110 1703405188
 !i10b 1
-Z10 !s108 1703389135.000000
+Z10 !s108 1703405188.000000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Adder.vhd|
 Z12 !s107 D:/Wendy/PSD/Adder.vhd|
 !i113 1
@@ -39,7 +39,7 @@ R2
 R3
 R4
 DEx4 work 5 adder 0 22 [:elI81gNH7Td0Ve0TK892
-!i122 257
+!i122 407
 l26
 L15 18
 V[KGTC8E8XMb>011IEQ9i^2
@@ -59,7 +59,7 @@ Z15 w1703389026
 R2
 R3
 R4
-!i122 258
+!i122 408
 R5
 Z16 8D:/Wendy/PSD/Amplifier.vhd
 Z17 FD:/Wendy/PSD/Amplifier.vhd
@@ -69,11 +69,11 @@ V06Rc=Az7T9]LkzW0G54iB0
 !s100 O]A2UAfhL?PmSZi?d9Mz50
 R8
 32
-Z18 !s110 1703389136
+R9
 !i10b 1
-Z19 !s108 1703389136.000000
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Amplifier.vhd|
-Z21 !s107 D:/Wendy/PSD/Amplifier.vhd|
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Amplifier.vhd|
+Z19 !s107 D:/Wendy/PSD/Amplifier.vhd|
 !i113 1
 R13
 R14
@@ -82,42 +82,42 @@ R2
 R3
 R4
 DEx4 work 9 amplifier 0 22 06Rc=Az7T9]LkzW0G54iB0
-!i122 258
+!i122 408
 l25
 L12 19
 VDhVmW0f7E25jgdejnC;Z52
 !s100 CK@[6PJJOCCQD6FEUEI611
 R8
 32
-R18
+R9
 !i10b 1
+R10
+R18
 R19
-R20
-R21
 !i113 1
 R13
 R14
 Edelay
-Z22 w1703342269
+Z20 w1703342269
 R1
 R2
 R3
 R4
 !i122 151
 R5
-Z23 8D:/Wendy/PSD/Sample_Delay.vhd
-Z24 FD:/Wendy/PSD/Sample_Delay.vhd
+Z21 8D:/Wendy/PSD/Sample_Delay.vhd
+Z22 FD:/Wendy/PSD/Sample_Delay.vhd
 l0
 L7 1
 V0Q<9i<?kz]TJOWdAV[]=K3
 !s100 EQOcZlG@KJZ>=D:0goNBg1
 R8
 32
-Z25 !s110 1703365075
+Z23 !s110 1703365075
 !i10b 1
-Z26 !s108 1703365075.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Sample_Delay.vhd|
-Z28 !s107 D:/Wendy/PSD/Sample_Delay.vhd|
+Z24 !s108 1703365075.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/Sample_Delay.vhd|
+Z26 !s107 D:/Wendy/PSD/Sample_Delay.vhd|
 !i113 1
 R13
 R14
@@ -129,16 +129,16 @@ R4
 DEx4 work 5 delay 0 22 0Q<9i<?kz]TJOWdAV[]=K3
 !i122 151
 l17
-Z29 L16 11
+Z27 L16 11
 V98XAh5d6?DZT;E0Q4BeFC0
 !s100 U5Pj^DFZJCNO?DAZ2d5oV3
 R8
 32
-R25
+R23
 !i10b 1
+R24
+R25
 R26
-R27
-R28
 !i113 1
 R13
 R14
@@ -149,8 +149,8 @@ R4
 !i122 28
 w1703327386
 R5
-R23
-R24
+R21
+R22
 l0
 L5 1
 VZ_l^C:L`4eR:m[Ab@9`RC3
@@ -160,32 +160,32 @@ R8
 !s110 1703327390
 !i10b 1
 !s108 1703327390.000000
-R27
-R28
+R25
+R26
 !i113 1
 R13
 R14
 Efir_filter
-Z30 w1703389134
+Z28 w1703405177
 R1
 R2
 R3
 R4
-!i122 259
+!i122 409
 R5
-Z31 8D:/Wendy/PSD/FIR_Filter.vhd
-Z32 FD:/Wendy/PSD/FIR_Filter.vhd
+Z29 8D:/Wendy/PSD/FIR_Filter.vhd
+Z30 FD:/Wendy/PSD/FIR_Filter.vhd
 l0
-L8 1
-VjnQjfkCG7[;^9_PBL?J3N3
-!s100 c4QMdj0nk5gRHX;HIU1H12
+L10 1
+VSEdO4VhHDa^=D=:2h`gnl3
+!s100 ]2l0c=Ze1^SCG3MSA]:OI3
 R8
 32
-R18
+R9
 !i10b 1
-R19
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/FIR_Filter.vhd|
-Z34 !s107 D:/Wendy/PSD/FIR_Filter.vhd|
+R10
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/FIR_Filter.vhd|
+Z32 !s107 D:/Wendy/PSD/FIR_Filter.vhd|
 !i113 1
 R13
 R14
@@ -194,43 +194,43 @@ R1
 R2
 R3
 R4
-DEx4 work 10 fir_filter 0 22 jnQjfkCG7[;^9_PBL?J3N3
-!i122 259
-l62
-L16 122
-VcRSYZ1IaM@zIi45^58G<D1
-!s100 7;R_`8AP]MF9HYA;U;ZA@0
+DEx4 work 10 fir_filter 0 22 SEdO4VhHDa^=D=:2h`gnl3
+!i122 409
+l67
+L17 133
+V0d8b<CnM;JGOQRbf9G?g90
+!s100 Q8Q:7kHl?C`C>?Q:fIh382
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R33
-R34
+R10
+R31
+R32
 !i113 1
 R13
 R14
 Esample_delay
-Z35 w1703386319
+Z33 w1703386319
 R1
 R2
 R3
 R4
-!i122 260
+!i122 410
 R5
-R23
-R24
+R21
+R22
 l0
 L7 1
 VM=UamJSI<ZLekmNS0b3:P2
 !s100 YokMDXQJb9ciROFnQ;nmn0
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R27
-R28
+R10
+R25
+R26
 !i113 1
 R13
 R14
@@ -239,19 +239,152 @@ R1
 R2
 R3
 R4
-Z36 DEx4 work 12 sample_delay 0 22 M=UamJSI<ZLekmNS0b3:P2
-!i122 260
+Z34 DEx4 work 12 sample_delay 0 22 M=UamJSI<ZLekmNS0b3:P2
+!i122 410
 l17
-R29
-Z37 VIBf<YP5:^mkYDfcgT:fRR1
-Z38 !s100 eZJc2EbmO8fVL@F;MV>eA3
+R27
+Z35 VIBf<YP5:^mkYDfcgT:fRR1
+Z36 !s100 eZJc2EbmO8fVL@F;MV>eA3
 R8
 32
-R18
+R9
 !i10b 1
-R19
-R27
-R28
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Esin_table
+Z37 w1703392578
+R2
+R3
+R4
+!i122 274
+R5
+Z38 8D:/Wendy/PSD/sinetable.vhd
+Z39 FD:/Wendy/PSD/sinetable.vhd
+l0
+L4 1
+VIZ[SaY0FSAA9;hHbW8@@@0
+!s100 4l455L6?A=;[o@REDTMSc2
+R8
+32
+Z40 !s110 1703392635
+!i10b 1
+Z41 !s108 1703392635.000000
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/sinetable.vhd|
+Z43 !s107 D:/Wendy/PSD/sinetable.vhd|
+!i113 1
+R13
+R14
+Artl
+R2
+R3
+R4
+DEx4 work 9 sin_table 0 22 IZ[SaY0FSAA9;hHbW8@@@0
+!i122 274
+l15
+L10 14
+V1j]_mIdgAFdoQhKbjNPbG2
+!s100 9[TlNX?;_L3LijaThSn?83
+R8
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R13
+R14
+Esinewave
+Z44 w1703391902
+R2
+R3
+R4
+!i122 269
+R5
+Z45 8D:/Wendy/PSD/sine.vhd
+Z46 FD:/Wendy/PSD/sine.vhd
+l0
+L5 1
+V=OYoRlI2;hEQ`Kmz55eQ10
+!s100 jkbfRNY6z6=766GPW;6YN2
+R8
+32
+Z47 !s110 1703391979
+!i10b 1
+Z48 !s108 1703391979.000000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Wendy/PSD/sine.vhd|
+Z50 !s107 D:/Wendy/PSD/sine.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R2
+R3
+R4
+DEx4 work 8 sinewave 0 22 =OYoRlI2;hEQ`Kmz55eQ10
+!i122 269
+l18
+L11 22
+VSaF>Z7fHIMhlcKS1P2R:d0
+!s100 `QkQ;_mhEGN^VSMQWjK1j3
+R8
+32
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R13
+R14
+Ewrite_table
+Z51 w1703392494
+Z52 DPx4 ieee 16 std_logic_textio 0 22 ^l:n6VFdg74Q?CKDhjD]D3
+Z53 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R2
+R3
+R4
+!i122 273
+R5
+R45
+R46
+l0
+L8 1
+VO1;@LFGZ9o4]d5Ced7EL62
+!s100 DP;d]?Fzl:Vm=[1jNeO0?1
+R8
+32
+R40
+!i10b 1
+R41
+R49
+R50
+!i113 1
+R13
+R14
+Abehav
+R52
+R53
+R2
+R3
+R4
+DEx4 work 11 write_table 0 22 O1;@LFGZ9o4]d5Ced7EL62
+!i122 273
+l45
+L10 70
+VAb;z12H^dRjGCN_liW7?K0
+!s100 0zEn3dk;UW5RcGL^GJXDc2
+R8
+32
+R40
+!i10b 1
+R41
+R49
+R50
 !i113 1
 R13
 R14
