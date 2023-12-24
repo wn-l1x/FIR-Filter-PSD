@@ -637,3 +637,276 @@ run
 run
 run
 run
+add wave -position insertpoint sim:/fir_filter/*
+vsim -gui work.fir_filter
+# End time: 22:23:51 on Dec 23,2023, Elapsed time: 0:06:01
+# Errors: 0, Warnings: 25
+# vsim -gui work.fir_filter 
+# Start time: 22:23:51 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.fir_filter(rtl)
+# Loading work.sample_delay(rtl)
+# Loading work.amplifier(rtl)
+# Loading work.adder(rtl)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/fir_filter/*
+force -freeze sim:/fir_filter/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/fir_filter/control_word 00100000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/fir_filter/control_word 01000000 0
+run
+run
+run
+run
+run
+run
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd was successful.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd was successful.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd failed with 3 errors.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd failed with 1 errors.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of Adder.vhd was successful.
+# Compile of Amplifier.vhd was successful.
+# Compile of FIR_Filter.vhd was successful.
+# Compile of Sample_Delay.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.fir_filter
+# End time: 22:39:03 on Dec 23,2023, Elapsed time: 0:15:12
+# Errors: 0, Warnings: 31
+# vsim -gui work.fir_filter 
+# Start time: 22:39:03 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.fir_filter(rtl)
+# Loading work.sample_delay(rtl)
+# Loading work.amplifier(rtl)
+# Loading work.adder(rtl)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/fir_filter/*
+force -freeze sim:/fir_filter/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/fir_filter/control_word 00100000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+force -freeze sim:/fir_filter/control_word 00000001 0
+run
+run
+run
+run
+run
+run
+run
+vsim -gui work.fir_filter
+# End time: 22:40:40 on Dec 23,2023, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 25
+# vsim -gui work.fir_filter 
+# Start time: 22:40:40 on Dec 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.delay_pkg
+# Loading work.fir_filter(rtl)
+# Loading work.sample_delay(rtl)
+# Loading work.amplifier(rtl)
+# Loading work.adder(rtl)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/fir_filter/*
+force -freeze sim:/fir_filter/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/fir_filter/control_word 00100000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/gen_adder
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(7)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(6)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(5)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(4)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(3)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(2)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(1)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fir_filter/amp_delay(0)/gen_amp
+run
+force -freeze sim:/fir_filter/control_word 10000000 0
+run
+run
+force -freeze sim:/fir_filter/control_word 001000000 0
+# Value length (9) does not equal array index length (8).
+# ** UI-Msg: (vsim-4011) Invalid force value: 001000000 0.
+# 
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 700 ps  Iteration: 3  Instance: /fir_filter/amp_delay(0)/gen_amp
+run
+run
+run

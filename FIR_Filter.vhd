@@ -8,12 +8,19 @@ use work.delay_pkg.all;
 entity FIR_Filter is
     port (
         clk : in std_logic;
-        control_word : in std_logic_vector(7 downto 0)
+        control_word : in std_logic_vector(7 downto 0);
+        filtered : out real
     );
 end FIR_Filter;
 
 architecture rtl of FIR_Filter is
-    
+
+    function real_convert (x : std_logic_vector) return real is
+        variable temp : real;
+    begin
+        temp := real(to_integer(signed(x)));
+        return temp;
+    end function real_convert;
 ---port initialization---------------------------
     component Adder is
         port (
@@ -102,32 +109,28 @@ architecture rtl of FIR_Filter is
                                 end if;
 
                     when COUNT =>
-                        if rising_edge(clk) then
-                        data_c <= data_c + 1; 
-                        s_amp_in(0) <= s_delay_out(0);
-                        s_amp_in(1) <= s_delay_out(1);
-                        s_amp_in(2) <= s_delay_out(2);
-                        s_amp_in(3) <= s_delay_out(3);
-                        s_amp_in(4) <= s_delay_out(4);
-                        s_amp_in(5) <= s_delay_out(5);
-                        s_amp_in(6) <= s_delay_out(6);
-                        s_amp_in(7) <= s_delay_out(7);
-                        s_adder_in(0) <= s_amp_out(0);
-                        s_adder_in(1) <= s_amp_out(1);
-                        s_adder_in(2) <= s_amp_out(2);
-                        s_adder_in(3) <= s_amp_out(3);
-                        s_adder_in(4) <= s_amp_out(4);
-                        s_adder_in(5) <= s_amp_out(5);
-                        s_adder_in(6) <= s_amp_out(6);
-                        s_adder_in(7) <= s_amp_out(7);              
+                    if rising_edge(clk) then
+                
+                        -- Assign values to s_amp_in based on s_delay_out
+                        for i in 0 to 7 loop
+                            s_amp_in(i) <= s_delay_out(i);
+                        end loop;
+                
+                        -- Assign values to s_adder_in based on s_amp_out
+                        for i in 0 to 7 loop
+                            s_adder_in(i) <= s_amp_out(i);
+                        end loop;
+
+                        data_c <= data_c + 1;
+                        filtered <= real_convert(s_adder_out) / 128.0;   
+
                         if data_c = order then 
                             data_c <= 0;
                             state <= DONE;
                         end if;
-                        end if;
-
+                    end if;
                     when DONE =>
-                        state <= FETCH_ORDER;   
+                     
             end case;
             end if;
         end process;
